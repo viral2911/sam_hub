@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": ["Read(./knowledge-base/**)", "Read(./data/**)"],
+    "ask": ["Bash(git push:*)"],
+    "deny": ["Edit(./data/**)", "Edit(./knowledge-base/**)"]
+  },
+  "model": "claude-sonnet-5",
+  "defaultMode": "plan",
+  "autoMemoryEnabled": true
+}
