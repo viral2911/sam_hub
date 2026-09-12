@@ -1,0 +1,71 @@
+{
+  "mcpServers": {
+    "mariadb-210": {
+      "command": "py",
+      "args": ["-m", "mysql_mcp_server"],
+      "env": {
+        "MYSQL_HOST": "${MYSQL_HOST}",
+        "MYSQL_PORT": "${MYSQL_PORT}",
+        "MYSQL_USER": "${MYSQL_USER}",
+        "MYSQL_PASSWORD": "${MYSQL_PASSWORD}",
+        "MYSQL_DATABASE": "${MYSQL_DATABASE}"
+      }
+    },
+    "sql-123-mis": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_MIS_CONNECTION_STRING}"
+      }
+    },
+    "sql-183-fda": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_FDA_CONNECTION_STRING}"
+      }
+    },
+    "sql-123-rms": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_RMS_CONNECTION_STRING}"
+      }
+    },
+    "sql-123-pams": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_PAMS_CONNECTION_STRING}"
+      }
+    },
+    "sql-123-payroll": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_PAYROLL_CONNECTION_STRING}"
+      }
+    },
+    "sql-123-polish": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_POLISH_CONNECTION_STRING}"
+      }
+    },
+    "sql-123-ms": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_MS_CONNECTION_STRING}"
+      }
+    },
+    "sql-183-sales": {
+      "command": "dotnet",
+      "args": ["${CLAUDE_PROJECT_DIR:-.}/.claude/mcp-tools/mssql-mcp/publish/MSSQL.MCP.dll"],
+      "env": {
+        "MSSQL_CONNECTION_STRING": "${MSSQL_SALES_CONNECTION_STRING}"
+      }
+    }
+  }
+}
