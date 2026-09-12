@@ -34,3 +34,4 @@ version: 1.0.0
 - All 9 connections are read-only (enforced in each connector's own code).
 - Same-server MSSQL databases (123, or 183) can be queried cross-DB with three-part names if the account has grants; different servers normally need their own connection.
 - Exception: `sql-123-*` has a real SQL Server Linked Server named `MARIADB` pointing at `mariadb-210`'s database (`_3b41b400ef4d007a`). A plain `SELECT` through `sql-123-*` can reach 210's tables directly this way, e.g. `SELECT * FROM [MARIADB].[_3b41b400ef4d007a]..[tabEmp_Mst]` (double-dot skips the schema, defaults to `dbo`). This is a normal `SELECT` with no forbidden keyword, so sam_hub's connector allows it — it is a genuine second route into 210 data, alongside the direct `mariadb-210` connection. Not yet verified: whether writes are blocked on this path the same way (the linked server may use a different remote login than `mariadb-210`'s own `devro` account) — check this live.
+
